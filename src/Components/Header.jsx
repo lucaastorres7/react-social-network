@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Dogs from "../assets/dogs.svg?react";
+import { UserContext } from "../Contexts/UserContext";
 
 const headerStyle = {
   header: "shadow-[0_1px_1px_rgba(0,0,0,.1)] fixed w-full z-100 bg-white top-0",
@@ -12,18 +13,29 @@ const headerStyle = {
 };
 
 const Header = () => {
+  const { data, userLogout } = React.useContext(UserContext);
+
   return (
     <header className={headerStyle.header}>
       <nav className={`${headerStyle.nav} container`}>
         <Link className={headerStyle.logo} to="/" aria-label="Dogs - Home">
           <Dogs />
         </Link>
-        <Link
-          className={`${headerStyle.login} ${headerStyle.loginAfter}`}
-          to="/login"
-        >
-          Login / Criar
-        </Link>
+        {data ? (
+          <Link
+            className={`${headerStyle.login} ${headerStyle.loginAfter}`}
+            to="/account"
+          >
+            {data.nome} <button onClick={userLogout}>Sair</button>
+          </Link>
+        ) : (
+          <Link
+            className={`${headerStyle.login} ${headerStyle.loginAfter}`}
+            to="/login"
+          >
+            Login / Criar
+          </Link>
+        )}
       </nav>
     </header>
   );
