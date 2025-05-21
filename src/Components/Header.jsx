@@ -5,7 +5,7 @@ import { UserContext } from "../Contexts/UserContext";
 import { headerStyle } from "../styles";
 
 const Header = () => {
-  const { data, userLogout } = React.useContext(UserContext);
+  const { data } = React.useContext(UserContext);
 
   return (
     <header className={headerStyle.header}>
@@ -18,7 +18,7 @@ const Header = () => {
             className={`${headerStyle.login} ${headerStyle.loginAfter}`}
             to="/account"
           >
-            {data.nome} <button onClick={userLogout}>Sair</button>
+            {data.nome}
           </Link>
         ) : (
           <Link

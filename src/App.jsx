@@ -11,6 +11,9 @@ import LoginPasswordReset from "./Components/Login/LoginPasswordReset";
 import { UserStorage } from "./Contexts/UserContext";
 import User from "./Components/User/User";
 import ProtectedRoute from "./Components/Helper/ProtectedRoute";
+import Feed from "./Components/Feed/Feed";
+import UserPhotoPost from "./Components/User/UserPhotoPost";
+import UserStats from "./Components/User/UserStats";
 
 function App() {
   return (
@@ -34,7 +37,9 @@ function App() {
                 </ProtectedRoute>
               }
             >
-              <Route path="" />
+              <Route path="" element={<Feed />} />
+              <Route path="post" element={<UserPhotoPost />} />
+              <Route path="statistics" element={<UserStats />} />
             </Route>
           </Routes>
           <Footer />
