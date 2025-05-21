@@ -1,14 +1,7 @@
 import React from "react";
 import { Navigate, Outlet } from "react-router-dom";
 import { UserContext } from "../../Contexts/UserContext";
-
-const loginStyles = {
-  login: "grid grid-cols-2 min-h-screen gap-[2rem]",
-  loginBefore:
-    "before:block before:bg-[url(src/assets/login.jpg)] before:bg-no-repeat before:bg-center before:bg-cover",
-  loginMediaQuery: "max-sm:grid-cols-1 max-sm:before:hidden",
-  forms: "max-w-[30rem] p-[1rem] max-sm:max-w-full",
-};
+import { loginStyles } from "../../styles";
 
 const Login = () => {
   const { login } = React.useContext(UserContext);
