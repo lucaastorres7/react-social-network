@@ -9,6 +9,8 @@ import LoginCreate from "./Components/Login/LoginCreate";
 import LoginPasswordLost from "./Components/Login/LoginPasswordLost";
 import LoginPasswordReset from "./Components/Login/LoginPasswordReset";
 import { UserStorage } from "./Contexts/UserContext";
+import User from "./Components/User/User";
+import ProtectedRoute from "./Components/Helper/ProtectedRoute";
 
 function App() {
   return (
@@ -23,6 +25,16 @@ function App() {
               <Route path="create" element={<LoginCreate />} />
               <Route path="lost" element={<LoginPasswordLost />} />
               <Route path="reset" element={<LoginPasswordReset />} />
+            </Route>
+            <Route
+              path="/account"
+              element={
+                <ProtectedRoute>
+                  <User />
+                </ProtectedRoute>
+              }
+            >
+              <Route path="" />
             </Route>
           </Routes>
           <Footer />

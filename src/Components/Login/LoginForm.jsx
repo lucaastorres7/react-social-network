@@ -5,7 +5,7 @@ import Button from "../Forms/Button";
 import useForm from "../../Hooks/useForm";
 import { TOKEN_POST, USER_GET } from "../../api";
 import { UserContext } from "../../Contexts/UserContext";
-import Error from "../UI/Error";
+import Error from "../Helper/Error";
 import { formStyles, buttonStyle } from "../../styles";
 
 const LoginForm = () => {
