@@ -5,21 +5,9 @@ import MinhasFotos from "../../assets/feed.svg?react";
 import Estatisticas from "../../assets/estatisticas.svg?react";
 import AdicionarFoto from "../../assets/adicionar.svg?react";
 import Sair from "../../assets/sair.svg?react";
-
-const userHeaderNavStyle = {
-  nav: "grid grid-cols-4 gap-[1rem]",
-  button:
-    "bg-[#eee] rounded-sm h-[40px] w-[40px] flex items-center justify-center cursor-pointer border border-transparent transition delay-100",
-  buttonHover:
-    "hover:bg-white hover:shadow-[0_0_0_3px_#eee] hover:border-[#333] hover:outline-none",
-  buttonFocus:
-    "focus:bg-white focus:shadow-[0_0_0_3px_#eee] focus:border-[#333] focus:outline-none",
-  buttonActive:
-    "bg-white shadow-[0_0_0_3px_#fea] border-[#fb1] rounded-sm h-[40px] w-[40px] flex items-center justify-center cursor-pointer border transition delay-100",
-};
+import { userHeaderNavStyle } from "../../styles";
 
 const UserHeaderNav = () => {
-  const [mobile, setMobile] = React.useState(null);
   const { userLogout } = React.useContext(UserContext);
   const navigate = useNavigate();
 
@@ -39,7 +27,7 @@ const UserHeaderNav = () => {
         to="/account"
         end
       >
-        <MinhasFotos /> {mobile && "Minhas Fotos"}
+        <MinhasFotos />
       </NavLink>
       <NavLink
         className={({ isActive }) =>
@@ -49,7 +37,7 @@ const UserHeaderNav = () => {
         }
         to="/account/statistics"
       >
-        <Estatisticas /> {mobile && "Estatísticas"}
+        <Estatisticas />
       </NavLink>
       <NavLink
         className={({ isActive }) =>
@@ -59,13 +47,13 @@ const UserHeaderNav = () => {
         }
         to="/account/post"
       >
-        <AdicionarFoto /> {mobile && "Adicionar Foto"}
+        <AdicionarFoto />
       </NavLink>
       <NavLink
         className={`${userHeaderNavStyle.button} ${userHeaderNavStyle.buttonHover} ${userHeaderNavStyle.buttonFocus}`}
         onClick={handleLogout}
       >
-        <Sair /> {mobile && "Sair"}
+        <Sair />
       </NavLink>
     </nav>
   );

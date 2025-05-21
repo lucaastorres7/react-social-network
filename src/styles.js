@@ -50,3 +50,21 @@ export const inputStyle = {
   wrapper: "mb-[1rem]",
   error: "text-[#f31] text-[0.875rem] mt-[0.25rem]",
 };
+
+export const userHeaderNavStyle = {
+  nav: "grid grid-cols-4 gap-[1rem]",
+  button:
+    "bg-[#eee] rounded-sm h-[40px] w-[40px] flex items-center justify-center cursor-pointer border border-transparent transition delay-100",
+  buttonHover:
+    "hover:bg-white hover:shadow-[0_0_0_3px_#eee] hover:border-[#333] hover:outline-none",
+  buttonFocus:
+    "focus:bg-white focus:shadow-[0_0_0_3px_#eee] focus:border-[#333] focus:outline-none",
+  buttonActive:
+    "bg-white shadow-[0_0_0_3px_#fea] border-[#fb1] rounded-sm h-[40px] w-[40px] flex items-center justify-center cursor-pointer border transition delay-100",
+};
+
+export const userPhotoPostStyle = {
+  photoPost: "grid grid-cols-2 gap-[2rem] mb-[2rem]",
+  preview:
+    "rounded-2xl bg-cover bg-center after:block after:h-0 after:p-[100%]",
+};
