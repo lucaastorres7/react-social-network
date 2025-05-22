@@ -7,6 +7,7 @@ import { TOKEN_POST, USER_GET } from "../../api";
 import { UserContext } from "../../Contexts/UserContext";
 import Error from "../Helper/Error";
 import { formStyles, buttonStyle } from "../../styles";
+import Head from "../Helper/Head";
 
 const LoginForm = () => {
   const username = useForm();
@@ -23,6 +24,7 @@ const LoginForm = () => {
 
   return (
     <section className="animeLeft">
+      <Head title="Login" />
       <h1 className={`${formStyles.title} ${formStyles.titleAfter}`}>Login</h1>
       <form className={formStyles.form} onSubmit={handleSubmit}>
         <Input label="Usuário" type="text" id="username" {...username} />

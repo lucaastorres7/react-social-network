@@ -7,8 +7,10 @@ import { USER_POST } from "../../api";
 import { UserContext } from "../../Contexts/UserContext";
 import useFetch from "../../Hooks/useFetch";
 import Error from "../Helper/Error";
+import Head from "../Helper/Head";
 
 const LoginCreate = () => {
+  <Head title="Criar Conta" />;
   const username = useForm();
   const email = useForm("email");
   const password = useForm();

@@ -7,6 +7,7 @@ import useFetch from "../../Hooks/useFetch";
 import { formStyles } from "../../styles";
 import Error from "../Helper/Error";
 import { useNavigate } from "react-router-dom";
+import Head from "../Helper/Head";
 
 const LoginPasswordReset = () => {
   const [login, setLogin] = React.useState("");
@@ -40,6 +41,7 @@ const LoginPasswordReset = () => {
 
   return (
     <div>
+      <Head title="Resete a senha" />
       <h1 className={`${formStyles.title} ${formStyles.titleAfter}`}>
         Resete a Senha
       </h1>
