@@ -5,7 +5,10 @@ import { footerStyle } from "../styles";
 const Footer = () => {
   return (
     <div className={footerStyle.footer}>
-      <DogsFooter />
+      <div className="flex justify-center">
+        <DogsFooter />
+      </div>
+
       <p className="mt-[1rem]">Dogs. Alguns direitos reservados</p>
     </div>
   );

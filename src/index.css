@@ -96,3 +96,7 @@ input::file-selector-button {
 .AppBody {
   flex: 1;
 }
+
+.VictoryContainer {
+  height: initial !important;
+}
