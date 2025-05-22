@@ -1,11 +1,6 @@
 import React from "react";
 import { VictoryPie, VictoryChart, VictoryBar } from "victory";
-
-const userGraphsStyle = {
-  graph: "grid grid-cols-2 gap-[2rem] max-sm:grid-cols-1 mb-[2rem]",
-  item: "shadow-[0_10px_20px_#9c9c9c] grid rounded-sm items-center",
-  total: "col-start-1 col-end-3 p-[2rem] text-[2rem]",
-};
+import { userGraphsStyle } from "../../styles";
 
 const UserGraphs = ({ data }) => {
   const [graph, setGraph] = React.useState([]);

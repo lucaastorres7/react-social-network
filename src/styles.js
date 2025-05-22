@@ -3,7 +3,7 @@ export const loginStyles = {
   loginBefore:
     "before:block before:bg-[url(src/assets/login.jpg)] before:bg-no-repeat before:bg-center before:bg-cover",
   loginMediaQuery: "max-sm:grid-cols-1 max-sm:before:hidden",
-  forms: "max-w-[30rem] p-[1rem] max-sm:max-w-full",
+  forms: "max-w-[30rem] p-[1rem] max-sm:max-w-full mt-[20vh]",
 };
 
 export const formStyles = {
@@ -14,7 +14,7 @@ export const formStyles = {
   form: "mb-[2rem]",
   forgot: "inline-block text-[#666] py-[0.5rem]",
   forgotAfter: "after:h-[2px] after:w-full after:bg-current after:block",
-  register: "mt-[4rem]",
+  register: "my-[4rem]",
   subtitle: "font-(family-name:--type-second) text-[2rem]/1 relative",
   subtitleAfter:
     "after:block after:bg-[#ddd] after:h-[0.5rem] after:w-[3rem] after:rounded-sm after:absolute after:bottom-[-20px]",
@@ -64,7 +64,7 @@ export const userHeaderNavStyle = {
 };
 
 export const userPhotoPostStyle = {
-  photoPost: "grid grid-cols-2 gap-[2rem] mb-[2rem]",
+  photoPost: "grid grid-cols-2 gap-[2rem] mb-[2rem] max-sm:grid-cols-1",
   preview:
     "rounded-2xl bg-cover bg-center after:block after:h-0 after:p-[100%]",
 };
@@ -106,4 +106,23 @@ export const commentsFormStyle = {
     "focus:outline-none focus:border-[#fb1] focus:bg-white focus:shadow-[0_0_0_3px_#fea] hover:outline-none hover:border-[#fb1] hover:bg-white hover:shadow-[0_0_0_3px_#fea]",
   button:
     "cursor-pointer text-[#333] font-[1rem] bg-transparent px-[1rem] overflow-hidden focus:outline-none",
+};
+
+export const loadingStyle = {
+  wrapper: "absolute w-full h-screen flex top-0 left-0 z-1000",
+  loading:
+    "m-auto w-[80px] h-[80px] flex justify-center items-center rounded-[50%] bg-white/50 pl-[5px]",
+};
+
+export const photoDeleteStyle = {
+  delete:
+    "bg-[#ddd] py-[0.3rem] px-[0.6rem] border border-transparent text-[0.875rem] cursor-pointer rounded-md transition delay-100",
+  deleteFocus:
+    "focus:outline-none focus:border-[#333] focus:bg-white focus:shadow-[0_0_0_3px_#eee] hover:outline-none hover:border-[#333] hover:bg-white hover:shadow-[0_0_0_3px_#eee]",
+};
+
+export const userGraphsStyle = {
+  graph: "grid grid-cols-2 gap-[2rem] max-sm:grid-cols-1 mb-[2rem]",
+  item: "shadow-[0_10px_20px_#9c9c9c] grid rounded-sm items-center",
+  total: "col-start-1 col-end-3 p-[2rem] text-[2rem]",
 };

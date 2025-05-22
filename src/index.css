@@ -90,7 +90,7 @@ input::file-selector-button {
 .App {
   display: flex;
   flex-direction: column;
-  min-width: calc(100vh + 10rem);
+  min-height: calc(100vh + 10rem);
 }
 
 .AppBody {

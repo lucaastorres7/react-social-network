@@ -1,10 +1,5 @@
 import React from "react";
-
-const loadingStyle = {
-  wrapper: "absolute w-full h-screen flex top-0 left-0 z-1000",
-  loading:
-    "m-auto w-[80px] h-[80px] flex justify-center items-center rounded-[50%] bg-white/50 pl-[5px]",
-};
+import { loadingStyle } from "../../styles";
 
 const Loading = () => {
   const [step, setStep] = React.useState(0);
