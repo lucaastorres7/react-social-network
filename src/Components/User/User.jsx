@@ -9,7 +9,7 @@ const User = () => {
   return (
     <section className={`container`}>
       <UserHeader />
-      <Outlet context={{ user: data.id }} />
+      <Outlet context={{ user: data.username }} />
     </section>
   );
 };

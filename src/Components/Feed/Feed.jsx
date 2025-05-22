@@ -3,11 +3,11 @@ import FeedModal from "./FeedModal";
 import FeedPhotos from "./FeedPhotos";
 import { useOutletContext } from "react-router-dom";
 
-const Feed = () => {
+const Feed = ({ user }) => {
   const [modalPhoto, setModalPhoto] = React.useState(null);
   const [pages, setPages] = React.useState([1]);
   const [infinite, setInfinite] = React.useState(true);
-  const { user } = useOutletContext() || {};
+  const { user: userOutlet } = useOutletContext() || {};
 
   React.useEffect(() => {
     let wait = false;
@@ -44,7 +44,7 @@ const Feed = () => {
         <FeedPhotos
           key={page}
           page={page}
-          user={user}
+          user={user || userOutlet}
           setModalPhoto={setModalPhoto}
           setInfinite={setInfinite}
         />

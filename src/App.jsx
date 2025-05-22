@@ -15,6 +15,7 @@ import Feed from "./Components/Feed/Feed";
 import UserPhotoPost from "./Components/User/UserPhotoPost";
 import UserStats from "./Components/User/UserStats";
 import Photo from "./Components/Photo/Photo";
+import UserProfile from "./Components/User/UserProfile";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/photo/:id" element={<Photo />} />
+            <Route path="/profile/:user" element={<UserProfile />} />
             <Route path="/login" element={<Login />}>
               <Route path="" element={<LoginForm />} />
               <Route path="create" element={<LoginCreate />} />
