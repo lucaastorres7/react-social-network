@@ -2,6 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { formStyles } from "../../styles";
 import PhotoComments from "./PhotoComments";
+import { UserContext } from "../../Contexts/UserContext";
+import PhotoDelete from "./PhotoDelete";
 
 const photoContentStyle = {
   photo:
@@ -19,6 +21,7 @@ const photoContentStyle = {
 };
 
 const PhotoContent = ({ data }) => {
+  const user = React.useContext(UserContext);
   const { comments, photo } = data;
 
   return (
@@ -30,12 +33,17 @@ const PhotoContent = ({ data }) => {
       <div className={photoContentStyle.details}>
         <div>
           <p className={photoContentStyle.author}>
-            <Link
-              className={photoContentStyle.link}
-              to={`/profile/${photo.author}`}
-            >
-              @{photo.author}
-            </Link>
+            {user.data && user.data.username === photo.author ? (
+              <PhotoDelete id={photo.id} />
+            ) : (
+              <Link
+                className={photoContentStyle.link}
+                to={`/profile/${photo.author}`}
+              >
+                @{photo.author}
+              </Link>
+            )}
+
             <span className={photoContentStyle.views}>{photo.acessos}</span>
           </p>
 
