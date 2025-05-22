@@ -68,3 +68,26 @@ export const userPhotoPostStyle = {
   preview:
     "rounded-2xl bg-cover bg-center after:block after:h-0 after:p-[100%]",
 };
+
+export const userHeaderStyle = {
+  header:
+    "grid grid-cols-[1fr_auto] items-center mb-[2-rem] relative mt-[1rem]",
+};
+
+export const feedModalStyle = {
+  modal:
+    "fixed w-screen h-screen bg-black/40 top-0 left-0 flex z-1000 py-[2rem] px-[4rem] max-sm:px-[2rem]",
+};
+
+export const feedPhotosStyle = {
+  feed: "grid grid-cols-3 gap-[1rem] mb-[1rem] justify-items-center max-sm:grid-cols-2",
+};
+
+export const feedPhotosItemStyle = {
+  photo:
+    "group grid border-sm overflow-hidden cursor-pointer nth-2:col-start-2 nth-2:col-end-4 nth-2:row-span-2 max-sm:nth-2:col-auto max-sm:nth-2:row-auto",
+  img: "row-start-1 col-start-1",
+  view: "row-start-1 col-start-1 bg-black/30 text-white text-[1rem] text-center items-center justify-center hidden group-hover:flex",
+  viewBefore:
+    "before:w-[16px] before:h-[10px] before:inline-block before:mr-[0.25rem] before:bg-[url(src/assets/visualizacao.svg)] after:bg-no-repeat",
+};
