@@ -91,3 +91,18 @@ export const feedPhotosItemStyle = {
   viewBefore:
     "before:w-[16px] before:h-[10px] before:inline-block before:mr-[0.25rem] before:bg-[url(src/assets/visualizacao.svg)] after:bg-no-repeat",
 };
+
+export const commentStyle = {
+  comments: "overflow-y-auto break-normal",
+  comment: "mb-[0.5rem]",
+};
+
+export const commentsFormStyle = {
+  form: "grid grid-cols-[1fr_auto] items-stretch m-[1rem]",
+  textarea:
+    "block w-full text-[1rem] font-(family-name:--type-first) resize-none border-3 border-[#eee] p-[0.5rem] rounded-sm bg-[#eee] transition delay:200",
+  textareaFocus:
+    "focus:outline-none focus:border-[#fb1] focus:bg-white focus:shadow-[0_0_0_3px_#fea] hover:outline-none hover:border-[#fb1] hover:bg-white hover:shadow-[0_0_0_3px_#fea]",
+  button:
+    "cursor-pointer text-[#333] font-[1rem] bg-transparent px-[1rem] overflow-hidden focus:outline-none",
+};
