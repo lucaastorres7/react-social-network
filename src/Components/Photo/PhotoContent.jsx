@@ -18,19 +18,39 @@ const photoContentStyle = {
     "mr-[2rem] before:inline-block before:h-[20px] before:mr-[0.5rem] before:relative before:top-[3px] before:w-[2px] before:bg-[#333] before:mt-[5px]",
   img: "row-start-1 row-end-4 max-lg:row-end-1",
   comments: "px-[2rem]",
+  single:
+    "m-auto h-auto rounded-sm bg-white grid grid-cols-1 grid-rows-[auto_1fr_auto] overflow-hidden max-lg:h-auto max-lg:max-h-[calc(100vh-4rem)] max-lg:overflow-y-auto max-lg:grid-cols-[minmax(20rem,40rem)]",
+  singleImg: "row-start-1 rounded-[0.4rem] overflow-hidden",
+  singleDetails: "pt-[1rem]",
 };
 
-const PhotoContent = ({ data }) => {
+const PhotoContent = ({ data, single }) => {
   const user = React.useContext(UserContext);
   const { comments, photo } = data;
 
   return (
-    <div className={`${photoContentStyle.photo} scaleUp`}>
-      <div className={photoContentStyle.img}>
+    <div
+      className={
+        single
+          ? `${photoContentStyle.single} scaleUp`
+          : `${photoContentStyle.photo} scaleUp`
+      }
+    >
+      <div
+        className={
+          single ? `${photoContentStyle.singleImg}` : `${photoContentStyle.img}`
+        }
+      >
         <img src={photo.src} alt={photo.title} />
       </div>
 
-      <div className={photoContentStyle.details}>
+      <div
+        className={
+          single
+            ? `${photoContentStyle.singleDetails}`
+            : `${photoContentStyle.details}`
+        }
+      >
         <div>
           <p className={photoContentStyle.author}>
             {user.data && user.data.username === photo.author ? (
@@ -62,6 +82,7 @@ const PhotoContent = ({ data }) => {
       <PhotoComments
         className={photoContentStyle.comments}
         id={photo.id}
+        single={single}
         comments={comments}
       />
     </div>

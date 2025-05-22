@@ -99,6 +99,7 @@ export const commentStyle = {
 
 export const commentsFormStyle = {
   form: "grid grid-cols-[1fr_auto] items-stretch m-[1rem]",
+  formSingle: "grid grid-cols-[1fr_auto] items-stretch my-[1rem]",
   textarea:
     "block w-full text-[1rem] font-(family-name:--type-first) resize-none border-3 border-[#eee] p-[0.5rem] rounded-sm bg-[#eee] transition delay:200",
   textareaFocus:

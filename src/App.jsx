@@ -14,6 +14,7 @@ import ProtectedRoute from "./Components/Helper/ProtectedRoute";
 import Feed from "./Components/Feed/Feed";
 import UserPhotoPost from "./Components/User/UserPhotoPost";
 import UserStats from "./Components/User/UserStats";
+import Photo from "./Components/Photo/Photo";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Header />
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/photo/:id" element={<Photo />} />
             <Route path="/login" element={<Login />}>
               <Route path="" element={<LoginForm />} />
               <Route path="create" element={<LoginCreate />} />
