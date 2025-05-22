@@ -20,38 +20,40 @@ import NotFound from "./Components/NotFound";
 
 function App() {
   return (
-    <>
+    <div className="App">
       <BrowserRouter>
         <UserStorage>
           <Header />
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/photo/:id" element={<Photo />} />
-            <Route path="/profile/:user" element={<UserProfile />} />
-            <Route path="/login" element={<Login />}>
-              <Route path="" element={<LoginForm />} />
-              <Route path="create" element={<LoginCreate />} />
-              <Route path="forgot" element={<LoginPasswordForgot />} />
-              <Route path="reset" element={<LoginPasswordReset />} />
-            </Route>
-            <Route
-              path="/account"
-              element={
-                <ProtectedRoute>
-                  <User />
-                </ProtectedRoute>
-              }
-            >
-              <Route path="" element={<Feed />} />
-              <Route path="post" element={<UserPhotoPost />} />
-              <Route path="statistics" element={<UserStats />} />
-            </Route>
-            <Route path="*" element={<NotFound />} />
-          </Routes>
+          <main className="AppBody">
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/photo/:id" element={<Photo />} />
+              <Route path="/profile/:user" element={<UserProfile />} />
+              <Route path="/login" element={<Login />}>
+                <Route path="" element={<LoginForm />} />
+                <Route path="create" element={<LoginCreate />} />
+                <Route path="forgot" element={<LoginPasswordForgot />} />
+                <Route path="reset" element={<LoginPasswordReset />} />
+              </Route>
+              <Route
+                path="/account"
+                element={
+                  <ProtectedRoute>
+                    <User />
+                  </ProtectedRoute>
+                }
+              >
+                <Route path="" element={<Feed />} />
+                <Route path="post" element={<UserPhotoPost />} />
+                <Route path="statistics" element={<UserStats />} />
+              </Route>
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </main>
           <Footer />
         </UserStorage>
       </BrowserRouter>
-    </>
+    </div>
   );
 }
 

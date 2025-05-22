@@ -29,7 +29,7 @@ export const buttonStyle = {
 };
 
 export const footerStyle = {
-  footer: "",
+  footer: "bg-[#fb1] pt-[3rem] px-[1rem] h-[10rem] text-center text-[#764701]",
 };
 
 export const headerStyle = {
